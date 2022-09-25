@@ -5,9 +5,9 @@ debug: false
 # NOTE: these settings define where Node.js will start your UI application. Therefore, these
 # "ui" settings usually specify a localhost port/URL which is later proxied to a public URL (using Apache or similar)
 ui:
-  ssl: false
-  host: localhost
-  port: 4000
+  ssl: true
+  host: acervodigital.meta.edu.br
+  port: 443
   # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
   nameSpace: /
   # The rateLimiter settings limit each IP to a 'max' of 500 requests per 'windowMs' (1 minute).
@@ -20,10 +20,10 @@ ui:
 # 'synced' with the 'dspace.server.url' setting in your backend's local.cfg.
 rest:
   ssl: true
-  host: api7.dspace.org
+  host: acervodigital.meta.edu.br
   port: 443
   # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
-  nameSpace: /server
+  nameSpace: /api
 
 # Caching settings
 cache:
@@ -109,7 +109,7 @@ submission:
           style: text-muted
 
 #  Default Language in which the UI will be rendered if the user's browser language is not an active language
-defaultLanguage: en
+defaultLanguage: pt-BR
 
 # Languages. DSpace Angular holds a message catalog for each of the following languages.
 # When set to active, users will be able to switch to the use of this language in the user interface.
@@ -117,53 +117,8 @@ languages:
   - code: en
     label: English
     active: true
-  - code: cs
-    label: Čeština
-    active: true
-  - code: de
-    label: Deutsch
-    active: true
-  - code: es
-    label: Español
-    active: true
-  - code: fr
-    label: Français
-    active: true
-  - code: gd
-    label: Gàidhlig
-    active: true
-  - code: lv
-    label: Latviešu
-    active: true
-  - code: hu
-    label: Magyar
-    active: true
-  - code: nl
-    label: Nederlands
-    active: true
-  - code: pt-PT
-    label: Português
-    active: true
   - code: pt-BR
     label: Português do Brasil
-    active: true
-  - code: fi
-    label: Suomi
-    active: true
-  - code: sv
-    label: Svenska
-    active: true
-  - code: tr
-    label: Türkçe
-    active: true
-  - code: kk
-    label: Қазақ
-    active: true
-  - code: bn
-    label: বাংলা
-    active: true
-  - code: el
-    label: Ελληνικά
     active: true
 
 # Browse-By Pages
